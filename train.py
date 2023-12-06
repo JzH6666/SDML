@@ -54,8 +54,8 @@ def train(sess, setting):
          saver = tf.train.Saver(max_to_keep=None)
 
 
-         new_saver = tf.train.import_meta_graph('./saved-model/MT_ATT_model-910.meta')
-         new_saver.restore(sess, './saved-model/MT_ATT_model-910')
+         new_saver = tf.train.import_meta_graph('./saved_model/MT_ATT_model-910.meta')
+         new_saver.restore(sess, './saved_model/MT_ATT_model-910')
          graph = tf.get_default_graph()
 
          visual = sess.graph.get_tensor_by_name("model/visual:0")
