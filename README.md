@@ -15,7 +15,7 @@ A Multimodal Emotion Recognition Method Based on Dual-Layer Asymmetric Multi-Hea
 
 * or process file by [OpenSimle2.0](https://github.com/audeering/opensmile), Bert, and [Librosa](https://github.com/librosa/librosa). Refer to utils folder.
 
-* download saved_model from [Google Drive](https://drive.google.com/drive/folders/1r9zzLFMl1tsgo7lKYpcYIsfrGuUPpXvk?usp=drive_link) or [Baidu Disk]( https://pan.baidu.com/s/1BJZkg8nNElFg9KSXdrLlyw?pwd=2qiu) 
+* download saved_model from [Google Drive](https://drive.google.com/drive/folders/1r9zzLFMl1tsgo7lKYpcYIsfrGuUPpXvk?usp=drive_link) or [Baidu Disk](https://pan.baidu.com/s/1CDMATWuxKOzGFBaJ870zbw?pwd=b3p0) 
 
 * generate train.pkl and test.pkl
 ```python 
