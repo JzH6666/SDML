@@ -102,7 +102,7 @@ class MM:
             dis_vt = tf.get_variable('wei_va', [self.att_dim, 150])
             dis_ta = tf.get_variable('wei_va', [self.att_dim, 150])
 
-            # 新增的内容
+
             Wr_vv = tf.get_variable('Wr_vv', [self.att_dim, 1])
             Wm_vv = tf.get_variable('Wm_vv', [self.att_dim, self.att_dim])
             Wu_vv = tf.get_variable('Wu_vv', [self.att_dim, self.att_dim])
@@ -118,7 +118,7 @@ class MM:
             W_l = tf.get_variable('W_l', [self.att_dim, self.config.class_num])
             b_l = tf.get_variable('b_l', [1, self.config.class_num])
 
-        # cal weights，，，，，，，解决模态缺失问题
+        # cal weights
 
         enc_v = SigmoidAtt(enc_vv, Wr_vv, Wm_vv, Wu_vv)
         enc_a = SigmoidAtt(enc_aa, Wr_aa, Wm_aa, Wu_aa)
@@ -127,7 +127,7 @@ class MM:
         pro_v = tf.reduce_max(tf.nn.softmax(tf.layers.dense(enc_v, self.config.class_num), -1), -1)
         pro_a = tf.reduce_max(tf.nn.softmax(tf.layers.dense(enc_a, self.config.class_num), -1), -1)
         pro_t = tf.reduce_max(tf.nn.softmax(tf.layers.dense(enc_t, self.config.class_num), -1), -1)
-
+        # commonspace weight
         space_wei = tf.nn.softmax(tf.reshape(tf.concat([pro_v, pro_a, pro_t], -1), [3, self.config.batch_size]), 0)
 
         common_v = tf.reshape(tf.concat([tf.matmul(tf.reshape(enc_vv, [-1, self.att_dim]), wei_va),
