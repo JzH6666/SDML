@@ -6,7 +6,7 @@ A Multimodal Emotion Recognition Method Based on Dual-Layer Asymmetric Multi-Hea
    transformers==2.10.0 <br>
    numpy==1.15.4 <br>
    sklearn <br>
-   python 3.6.13 <br>   cudatoolkit==9.2<br>
+   python 3.6.13 <br> 
 
 ## Usage
 
