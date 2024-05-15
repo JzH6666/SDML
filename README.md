@@ -1,5 +1,5 @@
-# DAMS
-A Multimodal Emotion Recognition Method Based on Dual-Layer Asymmetric Multi-Head Attention and Spatial Mapping
+# SDML
+Semantically-Enhanced Dual-Layer Multi-Head Attention Structure for Multimodal Emotion Fusion
 ## Requirements
    tensorflow-gpu==1.14.0 <br>
    torch == 1.2.0 <br>
